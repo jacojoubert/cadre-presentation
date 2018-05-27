@@ -7,7 +7,6 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('welcome');
   this.route('goals');
   this.route('problem', function() {
     this.route('features');
