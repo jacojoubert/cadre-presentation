@@ -1,10 +1,24 @@
+/* eslint-env node */
 'use strict';
 
+const fontFamilySystemUI = require('postcss-font-family-system-ui');
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  let app = new EmberApp(defaults, {
-    // Add options here
+  var app = new EmberApp(defaults, {
+    postcssOptions: {
+      compile: {
+        enabled: false
+      },
+      filter: {
+        enabled: true,
+        plugins: [
+          {
+            module: fontFamilySystemUI
+          }
+        ]
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
