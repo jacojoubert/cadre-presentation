@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'cadre-presentation',
+    podModulePrefix: 'cadre-presentation/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
