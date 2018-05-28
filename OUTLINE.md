@@ -4,8 +4,8 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
 ### Defining the problem
 - Components are more complex than you would first expect
   - Theming and customization is the most difficult requirement. Components needs to fit into their environment and be flexible enough to adapt to different use cases.
-  - Many different states (active, hover, focus, disabled, loading)
   - Aria compliance and i18n support. Serious apps need both. Customization of any value gets displayed must be possible (ie. date formatting)
+  - Need huge library of components.
   - Component interactions can be complex (forms and errors)
   - [ui-button example]
     - Different sizes
