@@ -2,6 +2,18 @@
   {{#if (gt stage 0)}}
     {{#ui-section as |section|}}
       {{#section.h2}}
+        Theming & Customization
+      {{/section.h2}}
+      {{section.divider}}
+      {{#section.body}}
+        Hard to get right.
+      {{/section.body}}
+    {{/ui-section}}
+  {{/if}}
+
+  {{#if (gt stage 1)}}
+    {{#ui-section as |section|}}
+      {{#section.h2}}
         States
       {{/section.h2}}
       {{section.divider}}
@@ -11,26 +23,14 @@
     {{/ui-section}}
   {{/if}}
 
-  {{#if (gt stage 1)}}
-    {{#ui-section as |section|}}
-      {{#section.h2}}
-        ARIA
-      {{/section.h2}}
-      {{section.divider}}
-      {{#section.body}}
-        Role, aria-*, focus handling, etc.
-      {{/section.body}}
-    {{/ui-section}}
-  {{/if}}
-
   {{#if (gt stage 2)}}
     {{#ui-section as |section|}}
       {{#section.h2}}
-        I18N
+        ARIA & I18N
       {{/section.h2}}
       {{section.divider}}
       {{#section.body}}
-        Can't have any hardcoded text.
+        Role, aria-*, focus handling, no hard-coded text, etc.
       {{/section.body}}
     {{/ui-section}}
   {{/if}}
@@ -38,7 +38,7 @@
   {{#if (gt stage 3)}}
     {{#ui-section as |section|}}
       {{#section.h2}}
-        Interaction between components
+        Component Interaction
       {{/section.h2}}
       {{section.divider}}
       {{#section.body}}
