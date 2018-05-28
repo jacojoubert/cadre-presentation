@@ -9,6 +9,7 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
   - Component interactions can be complex (forms and errors)
   - [ui-button example]
     - Different sizes
+    - Different looks
     - Many different states. User must be able to manually activate them (ie. if a select is open the button should be active)
     - Must support icons and properly space everything out
     - Must support auto, fixed, and full button widths
