@@ -76,7 +76,7 @@
               {{#form.row as |row|}}
                 {{#row.label}}Date{{/row.label}}
                 {{#row.description}}When do you need the money by?{{/row.description}}
-                {{ui-select-date }}
+                {{ui-select-date locale=locale}}
               {{/form.row}}
             {{/layout.item}}
           {{/ui-flex-layout}}
@@ -91,6 +91,22 @@
         {{#form.submit-button}}
           Submit
         {{/form.submit-button}}
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        {{#ui-button
+          onClick=(action (mut locale) "fr-CA")
+          active=(eq locale "fr-CA")
+          size="small"}}
+            French
+        {{/ui-button}}
+
+        {{#ui-button
+          onClick=(action (mut locale) "en-CA")
+          active=(eq locale "en-CA")
+          size="small"}}
+            English
+        {{/ui-button}}
       {{/ui-form}}
 
     {{/section.body}}

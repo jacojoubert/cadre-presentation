@@ -3,6 +3,7 @@ import { task, timeout } from 'ember-concurrency';
 
 export default Controller.extend({
   select: null,
+  locale: 'en-CA',
 
   continue: true,
 

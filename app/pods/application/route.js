@@ -34,11 +34,6 @@ export default Route.extend({
     if (event.which === 39 && event.shiftKey) {
       let currentController = this.controllerFor(current);
       let next = order[currentIndex + 1];
-      try {
-        let nextController = this.controllerFor(next);
-      } catch(error) {
-
-      }
 
       if (currentController.get('stage') < currentController.get('maxStage')) {
         currentController.incrementProperty('stage');
@@ -52,11 +47,6 @@ export default Route.extend({
     if (event.which === 37 && event.shiftKey) {
       let currentController = this.controllerFor(current);
       let previous = order[currentIndex - 1];
-      try {
-        let previousController = this.controllerFor(previous);
-      } catch(error) {
-
-      }
 
       if (currentController.get('stage') > 1) {
         currentController.decrementProperty('stage');
