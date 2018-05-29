@@ -6,6 +6,6 @@ export default Controller.extend({
 
   submit: task(function * () {
     yield timeout(2000);
-    this.transitionToRoute('demo.select-date');
+    this.transitionToRoute('demo.ui-select-date');
   })
 });
