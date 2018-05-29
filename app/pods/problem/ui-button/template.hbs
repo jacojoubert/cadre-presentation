@@ -72,10 +72,16 @@
     {{/ui-button}}
   {{/if}}
 
+  {{#if (gt stage 5)}}
+    {{#ui-button blueprint="select"}}
+      Selected value
+    {{/ui-button}}
+  {{/if}}
+
   <br>
   <br>
 
-  {{#if (gt stage 5)}}
+  {{#if (gt stage 6)}}
     {{#ui-button width="full"}}
       Wide button
     {{/ui-button}}
@@ -84,18 +90,9 @@
   <br>
   <br>
 
-  {{#if (gt stage 6)}}
+  {{#if (gt stage 7)}}
     {{#ui-button "approach.theming"}}
       Next slide
-    {{/ui-button}}
-  {{/if}}
-
-  <br>
-  <br>
-
-  {{#if (gt stage 7)}}
-    {{#ui-button blueprint="select"}}
-      Selected value
     {{/ui-button}}
   {{/if}}
 </div>
