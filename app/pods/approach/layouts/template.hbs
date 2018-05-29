@@ -1,1 +1,70 @@
-<h1>approach.layouts</h1>
+<div style="width: 100%">
+  {{#ui-section as |section|}}
+    {{#section.h1}}
+      Layouts
+    {{/section.h1}}
+
+    {{#if (gt stage 1)}}
+      {{#if (eq stage 2)}}
+        {{#section.actions}}
+          {{#ui-button variant="primary"}}
+            New Object
+          {{/ui-button}}
+        {{/section.actions}}
+      {{/if}}
+
+      {{#if (lt stage 4)}}
+        {{section.divider}}
+
+        {{#section.filters}}
+          {{#ui-select placeholder="Filter" width=100 size="small"}}
+          {{/ui-select}}
+        {{/section.filters}}
+      {{/if}}
+      
+      {{#section.actions}}
+        {{#ui-button size="small"}}
+          <svg
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 100 100">
+              <path d="M100,89.9c0,3.2-2.6,5.8-5.8,5.8H5.8c-3.2,0-5.8-2.6-5.8-5.8V70.7c0-3.2,2.6-5.8,5.8-5.8h27.9l8.1,8.2c2.2,2.2,5.1,3.4,8.2,3.4s5.9-1.2,8.2-3.4l8.2-8.2h27.9c3.2,0,5.8,2.6,5.8,5.8V89.9zM79.6,40.7L52.7,67.6C52,68.4,51,68.7,50,68.7s-2-0.4-2.7-1.1L20.4,40.7c-1.1-1.1-1.4-2.8-0.8-4.2c0.6-1.4,2-2.3,3.5-2.3h15.4V7.2c0-2.1,1.7-3.8,3.8-3.8h15.4c2.1,0,3.8,1.7,3.8,3.8v26.9h15.4c1.6,0,2.9,1,3.5,2.3C81.1,37.9,80.8,39.6,79.6,40.7zM73.1,80.3c-2.1,0-3.8,1.7-3.8,3.8c0,2.1,1.7,3.8,3.8,3.8c2.1,0,3.8-1.7,3.8-3.8C76.9,82,75.2,80.3,73.1,80.3zM88.5,80.3c-2.1,0-3.8,1.7-3.8,3.8c0,2.1,1.7,3.8,3.8,3.8s3.8-1.7,3.8-3.8C92.3,82,90.6,80.3,88.5,80.3z"/>
+          </svg>
+          Export
+        {{/ui-button}}
+      {{/section.actions}}
+    {{/if}}
+
+    {{section.divider}}
+
+    {{#section.body}}
+      <ul>
+        <li>CSS grid for section level layouts</li>
+        <li>Flexbox for row-level layouts</li>
+      </ul>
+    {{/section.body}}
+
+    {{#if (gt stage 1)}}
+      {{section.divider}}
+
+      {{#section.pagination as |pagination|}}
+        {{#pagination.location}}
+          Page 1 of 2
+        {{/pagination.location}}
+
+        {{#pagination.actions}}
+          {{#ui-button size="small" disabled=true}}
+            Previous
+          {{/ui-button}}
+
+          {{#ui-button size="small"}}
+            Next
+          {{/ui-button}}
+        {{/pagination.actions}}
+      {{/section.pagination}}
+    {{/if}}
+
+  {{/ui-section}}
+</div>

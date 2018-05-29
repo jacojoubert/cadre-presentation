@@ -17,6 +17,7 @@ Router.map(function() {
     this.route('blueprints');
     this.route('variants');
     this.route('layouts');
+    this.route('layouts-code');
     this.route('ui-section');
   });
   this.route('demo', function() {

@@ -14,6 +14,7 @@ export default Route.extend({
     'approach.blueprints',
     'approach.variants',
     'approach.layouts',
+    'approach.layouts-code',
     'approach.ui-section',
     'demo.ui-form',
     'demo.ui-select-date',

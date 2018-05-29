@@ -1,0 +1,26 @@
+<div style="width: 100%">
+  {{#ui-section as |section|}}
+    {{#section.body}}
+      <pre>\{{#ui-section as |section|}}
+  \{{#section.h1}} ...
+  \{{#section.actions}} ...
+
+  \{{section.divider}}
+
+  \{{#section.filters}} ...
+  \{{#section.actions}} ...
+
+  \{{section.divider}}
+
+  \{{#section.body}} ...
+
+  \{{#section.pagination as |pagination|}}
+    \{{#pagination.location}}...
+    \{{#pagination.actions}} ...
+  \{{/section.pagination}}
+\{{/ui-section}}</pre>
+
+
+    {{/section.body}}
+  {{/ui-section}}
+</div>
