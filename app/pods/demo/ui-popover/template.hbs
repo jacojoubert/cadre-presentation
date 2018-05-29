@@ -72,26 +72,20 @@
     {{section.divider}}
 
     {{#section.body}}
-      ...
+
+      <pre>\{{#ui-popover showOn="hover" as |popover|}}
+  What is this?
+  \{{#popover.popper as |popper|}}
+    \{{#popper.title}}
+      This is a tooltip style popover.
+    \{{/popper.title}}
+    \{{#popper.description}}
+      Expand on the feature with a super sweet description.
+    \{{/popper.description}}
+  \{{/popover.popper}}
+\{{/ui-popover}}</pre>
+
     {{/section.body}}
-
-    {{section.divider}}
-
-    {{#section.pagination as |pagination|}}
-      {{#pagination.location}}
-        Page 1 of 2
-      {{/pagination.location}}
-
-      {{#pagination.actions}}
-        {{#ui-button size="small" disabled=true}}
-          Previous
-        {{/ui-button}}
-
-        {{#ui-button size="small"}}
-          Next
-        {{/ui-button}}
-      {{/pagination.actions}}
-    {{/section.pagination}}
 
   {{/ui-section}}
 </div>
