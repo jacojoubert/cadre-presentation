@@ -3,22 +3,31 @@
     {{#section.body}}
 
       {{#ui-form onSubmit=(perform submit) as |form|}}
-        {{#form.description}}
-          A custom ui-section tailored to forms.
-        {{/form.description}}
+        {{#form.section as |section|}}
+          {{#section.title}}
+            Benefactor Request Form
+          {{/section.title}}
 
-        {{#form.section}}
-          {{#form.row as |row|}}
-            {{#row.label}}Text Input{{/row.label}}
-            {{#row.description}}You need to fill this out.{{/row.description}}
-            {{ui-input requirements=(hash required=true)}}
-          {{/form.row}}
+          {{#section.description}}
+            Have a government job and no morals? Introducing BAAS: Bribing as a service.
+          {{/section.description}}
+
+          {{section.divider}}
 
           {{#ui-flex-layout variant="form" as |layout|}}
+            {{#layout.item flex=2 minWidth="150px"}}
+              {{#form.row as |row|}}
+                {{#row.label}}Amount{{/row.label}}
+                {{#row.description}}You need to fill this out.{{/row.description}}
+                {{ui-input type="number" requirements=(hash required=true)}}
+              {{/form.row}}
+            {{/layout.item}}
+
             {{#layout.item flex=3 minWidth="150px"}}
               {{#form.row as |row|}}
-                {{#row.label}}Select{{/row.label}}
-                {{#ui-select placeholder="Select a currency" value=select as |select|}}
+                {{#row.label}}Currency{{/row.label}}
+                {{#row.description}}More currencies coming soon!{{/row.description}}
+                {{#ui-select value=select as |select|}}
                   {{select.option}}
                   {{#select.group label="North America"}}
                     {{#select.option
@@ -65,43 +74,18 @@
 
             {{#layout.item flex=3 minWidth="150px"}}
               {{#form.row as |row|}}
-                {{#row.label}}Select Date{{/row.label}}
-                {{ui-select-date}}
-              {{/form.row}}
-            {{/layout.item}}
-          {{/ui-flex-layout}}
-        {{/form.section}}
-
-        {{#form.section}}
-
-          {{#ui-flex-layout variant="form" as |layout|}}
-            {{#layout.item flex=3 minWidth="150px"}}
-              {{#form.row as |row|}}
-                {{#row.label}}Checkbox{{/row.label}}
-                {{#ui-checkbox requirements=(hash required=true) errorMessages=(hash required="Rick and Morty!")}}
-                  Wubba lubba dub dub
-                {{/ui-checkbox}}
-              {{/form.row}}
-            {{/layout.item}}
-
-            {{#layout.item flex=3 minWidth="150px"}}
-              {{#form.row as |row|}}
-                {{#row.label}}Radio set{{/row.label}}
-                {{#ui-radio-set as |radio|}}
-                  {{#radio.option value="optionA"}}
-                    Wubba
-                  {{/radio.option}}
-                  {{#radio.option value="optionB"}}
-                    Lubba
-                  {{/radio.option}}
-                  {{#radio.option value="optionC"}}
-                    Dub dub
-                  {{/radio.option}}
-                {{/ui-radio-set}}
+                {{#row.label}}Date{{/row.label}}
+                {{#row.description}}When do you need the money by?{{/row.description}}
+                {{ui-select-date }}
               {{/form.row}}
             {{/layout.item}}
           {{/ui-flex-layout}}
 
+          {{#form.row as |row|}}
+            {{#ui-checkbox requirements=(hash required=true)}}
+              I agree to perform services as requested by my benefactor
+            {{/ui-checkbox}}
+          {{/form.row}}
         {{/form.section}}
 
         {{#form.submit-button}}

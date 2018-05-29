@@ -20,7 +20,6 @@ export default Route.extend({
     'approach.maintainable',
     'demo.validation',
     'demo.ui-form',
-    'demo.ui-select-date',
     'demo.ui-modal',
     'demo.ui-popover',
     'demo.ui-other'
