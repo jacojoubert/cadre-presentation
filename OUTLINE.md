@@ -32,14 +32,17 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
 - Layouts
   - Bootstrap/Ember paper is not the way to go
   - The markup is messy, hard to understand by looking at it
+  - You are basically writing css inline at this point
   - Layout is best expressed in css using grids
   - [ui-section example]
     - Predefined areas makes it very easy to understand the code
+    - Removing elements allows it to collapse in on itself smartly
+    - Encodes the design language in code
     - Title, description, etc. automatically takes care of Aria requirements
     - Modifying the grid to work with different screen sizes is also very simple
     - Important for ARIA because the order of the content makes sense. Separates logical order from display order.
   - ember-paper comparison
-    - You are basically writing css inline at this point
+    - More flexible in some ways, but you are basically writing css inline at this point
 
 ### In action
 - [ui-form]

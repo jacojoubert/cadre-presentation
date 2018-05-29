@@ -14,8 +14,10 @@ Router.map(function() {
     this.route('ui-button');
   });
   this.route('approach', function() {
+    this.route('index');
     this.route('blueprints');
     this.route('variants');
+    this.route('layouts-pre');
     this.route('layouts');
     this.route('layouts-code');
     this.route('maintainable');
