@@ -7,9 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('goals');
+  this.route('goal');
   this.route('problem', function() {
     this.route('features');
+    this.route('maintainable');
     this.route('ui-button');
   });
   this.route('approach', function() {

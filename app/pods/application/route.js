@@ -6,7 +6,10 @@ export default Route.extend({
 
   order: [
     'index',
+    'goal',
+    'problem.index',
     'problem.features',
+    'problem.maintainable',
     'problem.ui-button',
     'approach.theming',
     'approach.variant',
