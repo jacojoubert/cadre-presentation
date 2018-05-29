@@ -1,0 +1,22 @@
+    {{#ui-section as |section|}}
+      {{#section.h2}}
+        HTML - Blueprints
+      {{/section.h2}}
+      {{section.divider}}
+      {{#section.body}}
+        <ul>
+          <li>Parent component takes care of all the behaviour</li>
+          <li>Blueprint focuses on the presentation</li>
+        </ul>
+        <pre>&lt;div class=&quot;bp-button-default__wrapper&quot;&gt;
+  &lt;div class=&quot;bp-button-default__label&quot;&gt;
+    \{{yield}}
+  &lt;/div&gt;
+
+  \{{#if loading}}
+    \{{ui-loading blueprint="button"}}
+  \{{/if}}
+&lt;/div&gt;
+</pre>
+      {{/section.body}}
+    {{/ui-section}}

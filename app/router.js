@@ -14,7 +14,8 @@ Router.map(function() {
     this.route('ui-button');
   });
   this.route('approach', function() {
-    this.route('theming');
+    this.route('blueprints');
+    this.route('variants');
     this.route('layouts');
     this.route('ui-section');
   });
