@@ -12,8 +12,6 @@ export default Route.extend({
     'problem.maintainable',
     'problem.ui-button',
     'approach.theming',
-    'approach.variant',
-    'approach.blueprint',
     'approach.layouts',
     'approach.ui-section',
     'demo.ui-form',

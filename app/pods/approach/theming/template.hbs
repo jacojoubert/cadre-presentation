@@ -1,1 +1,51 @@
-<h1>approach.theming</h1>
+{{#ui-layout blueprint="theming"}}
+  {{#if (gt stage 0)}}
+    {{#ui-section as |section|}}
+      {{#section.h2}}
+        HTML - Blueprints
+      {{/section.h2}}
+      {{section.divider}}
+      {{#section.body}}
+        <ul>
+          <li>Parent component takes care of all the behaviour</li>
+          <li>Blueprint focuses on the presentation</li>
+        </ul>
+        <pre>&lt;div class=&quot;bp-button-default__wrapper&quot;&gt;
+  &lt;div class=&quot;bp-button-default__label&quot;&gt;
+    \{{yield}}
+  &lt;/div&gt;
+
+  \{{#if loading}}
+    \{{ui-loading blueprint="button"}}
+  \{{/if}}
+&lt;/div&gt;
+</pre>
+      {{/section.body}}
+    {{/ui-section}}
+  {{/if}}
+
+  {{#if (gt stage 1)}}
+    {{#ui-section as |section|}}
+      {{#section.h2}}
+        CSS - Variants
+      {{/section.h2}}
+      {{section.divider}}
+      {{#section.body}}
+        <ul>
+          <li>Every blueprint defines a mixin</li>
+          <li>Use it to easily create slight variations of the same thing</li>
+        </ul>
+
+        <pre>@mixin bp-button-default(
+  $radius: 4px,
+  $height: 38px,
+  $font-size: 15px,
+  $padding: 12px,
+  $background: rgba(255, 255, 255, 1),
+  $box-shadow__inner: none,
+  ...
+) {}</pre>
+      {{/section.body}}
+    {{/ui-section}}
+  {{/if}}
+{{/ui-layout}}

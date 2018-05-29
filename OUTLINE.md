@@ -7,7 +7,7 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
   - Aria compliance and i18n support. Serious apps need both. Customization of any value gets displayed must be possible (ie. date formatting)
   - Need huge library of components.
   - Maintainable. Layout code from existing frameworks is not easily understood and complex layouts require code structure that is not accessible.
-  - Also applies to customizations done to components. If you are tweaking css you can't be required to fix it every time the html changes. 
+  - Also applies to customizations done to components. If you are tweaking css you can't be required to fix it every time the html changes.
   - [ui-button example]
     - Different sizes
     - Different looks
@@ -21,13 +21,13 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
 - Theming
   UI libraries will always fall short of proving everything, so the big question is how do you allow for deep customization that doesn't break with every version.
 
-  - Variant
-    - Every component defines a mixin.
-    - Use it to easily create slight variations of the same thing.
-
   - Blueprints
     - Parent component takes care of all the behaviour and allows blueprint to focus on the presentation
     - Parent only has one element (with few exceptions like modal)
+
+  - Variant
+    - Every component defines a mixin.
+    - Use it to easily create slight variations of the same thing.
 
 - Layouts
   - Bootstrap/Ember paper is not the way to go
