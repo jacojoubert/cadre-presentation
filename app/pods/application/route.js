@@ -18,6 +18,7 @@ export default Route.extend({
     'approach.layouts',
     'approach.layouts-code',
     'approach.maintainable',
+    'demo.validation',
     'demo.ui-form',
     'demo.ui-select-date',
     'demo.ui-modal',
@@ -31,7 +32,7 @@ export default Route.extend({
     const currentIndex = order.indexOf(current);
 
     // Right
-    if (event.which === 39) {
+    if (event.which === 39 && event.shiftKey) {
       let currentController = this.controllerFor(current);
       let next = order[currentIndex + 1];
       try {
@@ -49,7 +50,7 @@ export default Route.extend({
     }
 
     // Left
-    if (event.which === 37) {
+    if (event.which === 37 && event.shiftKey) {
       let currentController = this.controllerFor(current);
       let previous = order[currentIndex - 1];
       try {

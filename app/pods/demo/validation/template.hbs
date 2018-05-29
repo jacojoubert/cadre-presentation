@@ -1,0 +1,58 @@
+  {{#ui-section as |section|}}
+    {{#section.body}}
+    {{ui-input
+      type="number"
+      placeholder="Year of birth"
+      autofocus=true
+      requirements=(hash required=true
+                         max=2003)
+      errorMessages=(hash max="You have to be at least 18 years old")}}
+
+    <br><br>
+
+      <pre>\{{ui-input
+    type="number"
+    placeholder="Year of birth"
+    requirements=(hash required=true
+                       max=2003)
+    errorMessages=(hash max="You have to be at least 18 years old")}}</pre>
+
+
+    {{/section.body}}
+
+    {{#if (gt stage 1)}}
+      {{#section.h2}}
+        Validators
+      {{/section.h2}}
+      {{section.divider}}
+      {{#section.body}}
+        {{#ui-flex-layout variant="form" as |layout|}}
+          {{#layout.item flex=3 minWidth="150px"}}
+            <ul>
+              <li>Required</li>
+              <li>Disallowed</li>
+              <li>Equals</li>
+            </ul>
+          {{/layout.item}}
+
+          {{#layout.item flex=3 minWidth="150px"}}
+            <ul>
+              <li>Min</li>
+              <li>Max</li>
+              <li>Minlength</li>
+              <li>Maxlength</li>
+            </ul>
+          {{/layout.item}}
+
+          {{#layout.item flex=3 minWidth="150px"}}
+            <ul>
+              <li>Email</li>
+              <li>Pattern</li>
+              <li>Custom validators</li>
+            </ul>
+          {{/layout.item}}
+        {{/ui-flex-layout}}
+      {{/section.body}}
+    {{/if}}
+
+  {{/ui-section}}

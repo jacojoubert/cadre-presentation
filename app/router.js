@@ -24,6 +24,7 @@ Router.map(function() {
   });
   this.route('demo', function() {
     this.route('ui-form');
+    this.route('validation');
     this.route('ui-select-date');
     this.route('ui-modal');
     this.route('ui-popover');

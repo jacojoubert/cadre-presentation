@@ -1,1 +1,114 @@
-<h1>demo.ui-form</h1>
+<div style="width: 100%">
+  {{#ui-section as |section|}}
+    {{#section.body}}
+
+      {{#ui-form onSubmit=(perform submit) as |form|}}
+        {{#form.description}}
+          A custom ui-section tailored to forms.
+        {{/form.description}}
+
+        {{#form.section}}
+          {{#form.row as |row|}}
+            {{#row.label}}Text Input{{/row.label}}
+            {{#row.description}}You need to fill this out.{{/row.description}}
+            {{ui-input requirements=(hash required=true)}}
+          {{/form.row}}
+
+          {{#ui-flex-layout variant="form" as |layout|}}
+            {{#layout.item flex=3 minWidth="150px"}}
+              {{#form.row as |row|}}
+                {{#row.label}}Select{{/row.label}}
+                {{#ui-select placeholder="Select a currency" value=select as |select|}}
+                  {{select.option}}
+                  {{#select.group label="North America"}}
+                    {{#select.option
+                      value="CAN"
+                      searchValue="Canadian Dollar CAD"}}
+                        Canadian Dollar
+                    {{/select.option}}
+                    {{#select.option
+                      value="USD"
+                      searchValue="United States Dollar USD"}}
+                        United States Dollar
+                    {{/select.option}}
+                    {{#select.option
+                      value="MXN"
+                      searchValue="Mexican Peso MXN"
+                      disabled=true}}
+                        Mexican Peso
+                    {{/select.option}}
+                  {{/select.group}}
+
+                  {{#select.group label="Europe"}}
+                    {{#select.option
+                      value="EUR"
+                      searchValue="European Union Euro EUR"}}
+                        European Union Euro
+                    {{/select.option}}
+                    {{#select.option
+                      value="GBP"
+                      searchValue="British Pounts GBP"}}
+                        British Pounds
+                    {{/select.option}}
+                  {{/select.group}}
+
+                  {{#select.group label="Africa"}}
+                    {{#select.option
+                      value="ZAR"
+                      searchValue="South African Rand ZAR"}}
+                        South African Rand
+                    {{/select.option}}
+                  {{/select.group}}
+                {{/ui-select}}
+              {{/form.row}}
+            {{/layout.item}}
+
+            {{#layout.item flex=3 minWidth="150px"}}
+              {{#form.row as |row|}}
+                {{#row.label}}Select Date{{/row.label}}
+                {{ui-select-date}}
+              {{/form.row}}
+            {{/layout.item}}
+          {{/ui-flex-layout}}
+        {{/form.section}}
+
+        {{#form.section}}
+
+          {{#ui-flex-layout variant="form" as |layout|}}
+            {{#layout.item flex=3 minWidth="150px"}}
+              {{#form.row as |row|}}
+                {{#row.label}}Checkbox{{/row.label}}
+                {{#ui-checkbox requirements=(hash required=true) errorMessages=(hash required="Rick and Morty!")}}
+                  Wubba lubba dub dub
+                {{/ui-checkbox}}
+              {{/form.row}}
+            {{/layout.item}}
+
+            {{#layout.item flex=3 minWidth="150px"}}
+              {{#form.row as |row|}}
+                {{#row.label}}Radio set{{/row.label}}
+                {{#ui-radio-set as |radio|}}
+                  {{#radio.option value="optionA"}}
+                    Wubba
+                  {{/radio.option}}
+                  {{#radio.option value="optionB"}}
+                    Lubba
+                  {{/radio.option}}
+                  {{#radio.option value="optionC"}}
+                    Dub dub
+                  {{/radio.option}}
+                {{/ui-radio-set}}
+              {{/form.row}}
+            {{/layout.item}}
+          {{/ui-flex-layout}}
+
+        {{/form.section}}
+
+        {{#form.submit-button}}
+          Submit
+        {{/form.submit-button}}
+      {{/ui-form}}
+
+    {{/section.body}}
+  {{/ui-section}}
+</div>
