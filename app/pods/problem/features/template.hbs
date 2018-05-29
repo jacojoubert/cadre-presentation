@@ -1,9 +1,9 @@
 {{#ui-layout blueprint="problem-grid"}}
   {{#if (gt stage 0)}}
     {{#ui-section as |section|}}
-      {{#section.h2}}
+      {{#section.h1}}
         Theming
-      {{/section.h2}}
+      {{/section.h1}}
       {{section.divider}}
       {{#section.body}}
         Needs to play nice and blend into existing systems.
@@ -13,9 +13,9 @@
 
   {{#if (gt stage 1)}}
     {{#ui-section as |section|}}
-      {{#section.h2}}
-        Component Selection
-      {{/section.h2}}
+      {{#section.h1}}
+        Components
+      {{/section.h1}}
       {{section.divider}}
       {{#section.body}}
         You need a huuuuge library of components.
@@ -25,9 +25,9 @@
 
   {{#if (gt stage 2)}}
     {{#ui-section as |section|}}
-      {{#section.h2}}
+      {{#section.h1}}
         ARIA & I18N
-      {{/section.h2}}
+      {{/section.h1}}
       {{section.divider}}
       {{#section.body}}
         Role, aria-*, focus handling, no hard-coded text, etc.

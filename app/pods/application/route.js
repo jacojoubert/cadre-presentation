@@ -15,7 +15,7 @@ export default Route.extend({
     'approach.variants',
     'approach.layouts',
     'approach.layouts-code',
-    'approach.ui-section',
+    'approach.maintainable',
     'demo.ui-form',
     'demo.ui-select-date',
     'demo.ui-modal',

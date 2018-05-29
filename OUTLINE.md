@@ -38,6 +38,8 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
     - Title, description, etc. automatically takes care of Aria requirements
     - Modifying the grid to work with different screen sizes is also very simple
     - Important for ARIA because the order of the content makes sense. Separates logical order from display order.
+  - ember-paper comparison
+    - You are basically writing css inline at this point
 
 ### In action
 - [ui-form]

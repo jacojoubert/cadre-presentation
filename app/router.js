@@ -18,7 +18,7 @@ Router.map(function() {
     this.route('variants');
     this.route('layouts');
     this.route('layouts-code');
-    this.route('ui-section');
+    this.route('maintainable');
   });
   this.route('demo', function() {
     this.route('ui-form');
