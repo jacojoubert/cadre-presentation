@@ -50,6 +50,15 @@ ul {
   text-align: left;
 }
 
+.tooltip {
+  border-bottom: dashed 1px $color-blue;
+  font-size: 12px;
+  color: $color-blue !important;
+  display: inline-block;
+  margin: 0 20px;
+  line-height: 20px;
+}
+
 .frame {
   color: #587787;
   height: 100vh;
