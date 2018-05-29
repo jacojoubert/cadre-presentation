@@ -68,9 +68,9 @@ pre {
   }
 }
 
-.bp-layout-four-grid {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+.bp-layout-problem-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: stretch;
   justify-content: stretch;
   grid-gap: 20px;
