@@ -94,19 +94,21 @@
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        {{#ui-button
-          onClick=(action (mut locale) "fr-CA")
-          active=(eq locale "fr-CA")
-          size="small"}}
-            French
-        {{/ui-button}}
+        {{#if (eq stage 2)}}
+          {{#ui-button
+            onClick=(action (mut locale) "fr-CA")
+            active=(eq locale "fr-CA")
+            size="small"}}
+              French
+          {{/ui-button}}
 
-        {{#ui-button
-          onClick=(action (mut locale) "en-CA")
-          active=(eq locale "en-CA")
-          size="small"}}
-            English
-        {{/ui-button}}
+          {{#ui-button
+            onClick=(action (mut locale) "en-CA")
+            active=(eq locale "en-CA")
+            size="small"}}
+              English
+          {{/ui-button}}
+        {{/if}}
       {{/ui-form}}
 
     {{/section.body}}

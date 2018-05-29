@@ -2,6 +2,10 @@ import Controller from '@ember/controller';
 import { task, timeout } from 'ember-concurrency';
 
 export default Controller.extend({
+  queryParams: ['stage'],
+  stage: 1,
+  maxStage: 2,
+
   select: null,
   locale: 'en-CA',
 
