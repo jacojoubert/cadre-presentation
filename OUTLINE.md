@@ -73,7 +73,7 @@ UI libraries will always fall short of proving everything, so the big question i
 
   - Server errors goes on the button you clicked
 
-## Other examples
+### Other examples
   - [ui-modal]
     - Title and description has aria support
     - Auto set focus to the first element
