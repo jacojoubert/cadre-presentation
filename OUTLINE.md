@@ -56,13 +56,13 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
   - Everything is keyboard navigable using both tab and arrow keys
   - Enters opens it up, esc closes it
   - Is actually localized already using moment
+  - Once components are accessible they are more pleasant to use for everybody
 
 - [ui-modal]
   - Title and description has aria support
   - Auto set focus to the first element
   - Tab wraps around
-  - You can also programmatically show a modal, called a [ui-prompt]
-  - Can nest them has many times as you want
+  - You can also programmatically show a modal via the cadre service
 
 - [ui-popover]
   - Utility component that makes building new components easier

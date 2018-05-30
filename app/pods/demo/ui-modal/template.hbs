@@ -1,1 +1,59 @@
-<h1>demo.ui-modal</h1>
+{{#ui-section as |section|}}
+  {{#section.h1}}
+    Modal
+  {{/section.h1}}
+  {{section.divider}}
+  {{#section.body}}
+
+    {{#ui-button onClick=(action (mut showModal) true)}}
+      Show Modal
+    {{/ui-button}}
+
+    {{#if showModal}}
+      {{#ui-modal
+          width=300
+          escToClose=true
+          onClose=(action (mut showModal) (not showModal)) as |modal|}}
+
+          {{#modal.title}}
+            Modal
+          {{/modal.title}}
+
+          {{#modal.description}}
+            This is a sample modal that allows you to submit information to close.
+          {{/modal.description}}
+
+          {{#modal.form onSubmit=modal.close as |form|}}
+            {{#modal.body}}
+              {{#form.row as |row|}}
+                {{#row.label}}
+                  Label
+                {{/row.label}}
+                {{ui-input
+                  requirements=(hash
+                    required=true
+                  )
+                  placeholder="required"
+                  errorMessages=(hash
+                    required="Fill in this field to close the modal"
+                  )
+                 }}
+              {{/form.row}}
+            {{/modal.body}}
+
+            {{#modal.footer}}
+              {{#form.submit-button}}
+                Submit
+              {{/form.submit-button}}
+
+              {{#ui-button onClick=(action modal.close)}}
+                Cancel
+              {{/ui-button}}
+            {{/modal.footer}}
+          {{/modal.form}}
+
+        {{/ui-modal}}
+      {{/if}}
+
+  {{/section.body}}
+{{/ui-section}}
