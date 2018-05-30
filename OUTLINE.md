@@ -8,14 +8,6 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
   - Need huge library of components.
   - Maintainable. Layout code from existing frameworks is not easily understood and complex layouts require code structure that is not accessible.
   - Also applies to customizations done to components. If you are tweaking css you can't be required to fix it every time the html changes.
-  - [ui-button example]
-    - Different sizes
-    - Different looks
-    - Many different states. User must be able to manually activate them (ie. if a select is open the button should be active)
-    - Must support icons and properly space everything out
-    - Must support auto, fixed, and full button widths
-    - Markup must be contextual for aria support. Button vs a tag
-    - Need custom layouts for general button vs. select button
 
 ### The approach
 - Theming
@@ -28,6 +20,19 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
   - Variant
     - Every component defines a mixin.
     - Use it to easily create slight variations of the same thing.
+
+- [ui-button example]
+  - So how does this work in practice. Take the most simplest of components: the humble button
+  - Base button gives you:
+    - Different sizes
+    - Supports auto, fixed, and full button widths
+    - Many different states. User must be able to manually activate them (ie. if a select is open the button should be active)
+    - Ability to use it as a link for ARIA support
+  - Variant gives you
+    - How the button looks
+    - Support icons and properly space everything out
+  - Blueprints gives you
+    - Custom layouts for general button vs. select button
 
 - Layouts
   - Bootstrap/Ember paper is not the way to go

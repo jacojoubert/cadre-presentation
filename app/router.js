@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('problem', function() {
     this.route('features');
     this.route('maintainable');
+    this.route('in-practice');
     this.route('ui-button');
   });
   this.route('approach', function() {
