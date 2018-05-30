@@ -29,6 +29,7 @@ Router.map(function() {
     this.route('ui-popover');
     this.route('ui-other');
   });
+  this.route('thanks');
 });
 
 export default Router;

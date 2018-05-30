@@ -22,7 +22,9 @@ export default Route.extend({
     'demo.ui-form',
     'demo.ui-modal',
     'demo.ui-popover',
-    'demo.ui-other'
+    'demo.ui-other',
+    'thanks',
+    'index'
   ],
 
   keyUp(event) {

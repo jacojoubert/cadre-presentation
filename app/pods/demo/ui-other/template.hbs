@@ -1,1 +1,60 @@
-<h1>demo.ui-other</h1>
+{{#ui-section as |section|}}
+  {{#section.h1}}
+    Component library
+  {{/section.h1}}
+  {{section.divider}}
+  {{#section.body}}
+    {{#ui-flex-layout variant="form" as |layout|}}
+      {{#layout.item flex=2 minWidth="150px"}}
+        <ul>
+          <li>Form</li>
+          <li>Input</li>
+          <li>Textarea</li>
+          <li>Checkbox</li>
+          <li>Radio</li>
+          <li>Select</li>
+          <li>Select Date</li>
+        </ul>
+      {{/layout.item}}
+
+      {{#layout.item flex=2 minWidth="150px"}}
+        <ul>
+          <li>Button</li>
+          <li class="disabled">Drop Button</li>
+          <li class="disabled">Split Button</li>
+        </ul>
+
+        <ul>
+          <li>Section</li>
+          <li class="disabled">Card</li>
+          <li>Flex Layout</li>
+          <li class="disabled">Table</li>
+        </ul>
+
+      {{/layout.item}}
+
+      {{#layout.item flex=2 minWidth="150px"}}
+        <ul>
+          <li>Modal</li>
+          <li>Prompt</li>
+          <li>Popover</li>
+        </ul>
+
+        <ul>
+          <li>Tabs</li>
+          <li>Message</li>
+          <li>Divider</li>
+        </ul>
+      {{/layout.item}}
+
+      {{#layout.item flex=2 minWidth="150px"}}
+        <ul>
+          <li>App Navigation</li>
+          <li>App Layout</li>
+        </ul>
+      {{/layout.item}}
+
+    {{/ui-flex-layout}}
+
+  {{/section.body}}
+{{/ui-section}}
