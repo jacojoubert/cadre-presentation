@@ -2,7 +2,7 @@
 Create a UI framework that allows you to build enterprise grade CRUD apps without having to write HTML or CSS. Like Material design, but for the web.
 
 ### Defining the problem
-- Components are more complex than you would first expect
+  - Components are more complex than you would first expect
   - Theming and customization is the most difficult requirement. Components needs to fit into their environment and be flexible enough to adapt to different use cases.
   - Aria compliance and i18n support. Serious apps need both. Customization of any value gets displayed must be possible (ie. date formatting)
   - Need huge library of components.
@@ -10,8 +10,7 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
   - Also applies to customizations done to components. If you are tweaking css you can't be required to fix it every time the html changes.
 
 ### The approach
-- Theming
-  UI libraries will always fall short of proving everything, so the big question is how do you allow for deep customization that doesn't break with every version.
+UI libraries will always fall short of proving everything, so the big question is how do you allow for deep customization that doesn't break with every version.
 
   - Blueprints
     - Parent component takes care of all the behaviour and allows blueprint to focus on the presentation
@@ -21,8 +20,9 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
     - Every component defines a mixin.
     - Use it to easily create slight variations of the same thing.
 
-- [ui-button example]
-  - So how does this work in practice. Take the most simplest of components: the humble button
+### In practice
+  - [ui-button example]
+  - Take the most simplest of components: the humble button
   - Base button gives you:
     - Different sizes
     - Supports auto, fixed, and full button widths
@@ -34,7 +34,7 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
   - Blueprints gives you
     - Custom layouts for general button vs. select button
 
-- Layouts
+### Layouts
   - Bootstrap/Ember paper is not the way to go
   - The markup is messy, hard to understand by looking at it
   - You are basically writing css inline at this point
@@ -49,27 +49,38 @@ Create a UI framework that allows you to build enterprise grade CRUD apps withou
   - ember-paper comparison
     - More flexible in some ways, but you are basically writing css inline at this point
 
-### In action
-- [ui-form]
-  - Form component auto ties inputs together
-  - Uses a custom ui-layout blueprint to separate sections
-  - Easy to specify validation rules and override the error message
-  - Server errors goes on the button you clicked
+### Validation
+  - Each form field validates itself
+  - You pass it a list of requirements
+  - You may optionally also provide an error message if the validation fails
   - Error messages gets announced as soon as they show
+  - There are 9 validators build in, and you can also add your own
 
-- [ui-select-date]
-  - Everything is keyboard navigable using both tab and arrow keys
-  - Enters opens it up, esc closes it
-  - Is actually localized already using moment
-  - Once components are accessible they are more pleasant to use for everybody
+### Building a form
+  - [ui-form]
+  - Form component auto ties form fields together
+  - Uses a custom ui-layout blueprint to separate sections
 
-- [ui-modal]
-  - Title and description has aria support
-  - Auto set focus to the first element
-  - Tab wraps around
-  - You can also programmatically show a modal via the cadre service
+  - [ui-select]
+    - You can quickly search
+    - Navigate using the arrow keys or tab
 
-- [ui-popover]
-  - Utility component that makes building new components easier
+  - [ui-select-date]
+    - Everything is keyboard navigable using both tab and arrow keys
+    - Enters opens it up, esc closes it
+    - Is actually localized already using moment
+    - Once components are accessible they are more pleasant to use for everybody
 
-- Show other components available
+  - Server errors goes on the button you clicked
+
+## Other examples
+  - [ui-modal]
+    - Title and description has aria support
+    - Auto set focus to the first element
+    - Tab wraps around
+    - You can also programmatically show a modal via the cadre service
+
+  - [ui-popover]
+    - Utility component that makes building new components easier
+
+### Show list of other components available
