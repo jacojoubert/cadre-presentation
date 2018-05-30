@@ -42,6 +42,7 @@
         width=350 as |popover|}}
         {{#ui-button
           id=popover.triggerId
+          class=popover.triggerClass
           size="small"}}
           <svg
             version="1.1"
@@ -74,7 +75,9 @@
     {{#section.body}}
 
       <pre>\{{#ui-popover showOn="hover" as |popover|}}
+
   What is this?
+
   \{{#popover.popper as |popper|}}
     \{{#popper.title}}
       This is a tooltip style popover.
