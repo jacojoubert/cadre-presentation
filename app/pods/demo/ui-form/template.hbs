@@ -5,11 +5,11 @@
       {{#ui-form onSubmit=(perform submit) as |form|}}
         {{#form.section as |section|}}
           {{#section.title}}
-            Benefactor Request Form
+            New Payment
           {{/section.title}}
 
           {{#section.description}}
-            Have a government job and no morals? Introducing BAAS: Bribing as a service.
+            Enter the payment defails here.
           {{/section.description}}
 
           {{section.divider}}
@@ -26,8 +26,8 @@
             {{#layout.item flex=3 minWidth="150px"}}
               {{#form.row as |row|}}
                 {{#row.label}}Currency{{/row.label}}
-                {{#row.description}}More currencies coming soon!{{/row.description}}
-                {{#ui-select value=select as |select|}}
+                {{#row.description}}Currency of the payment.{{/row.description}}
+                {{#ui-select value=select requirements=(hash required=true) as |select|}}
                   {{select.option}}
                   {{#select.group label="North America"}}
                     {{#select.option
@@ -74,16 +74,16 @@
 
             {{#layout.item flex=3 minWidth="150px"}}
               {{#form.row as |row|}}
-                {{#row.label}}Date{{/row.label}}
-                {{#row.description}}When do you need the money by?{{/row.description}}
-                {{ui-select-date locale=locale}}
+                {{#row.label}}Date Paid{{/row.label}}
+                {{#row.description}}When was the amount deposited?{{/row.description}}
+                {{ui-select-date locale=locale requirements=(hash required=true)}}
               {{/form.row}}
             {{/layout.item}}
           {{/ui-flex-layout}}
 
           {{#form.row as |row|}}
-            {{#ui-checkbox requirements=(hash required=true)}}
-              I agree to perform services as requested by my benefactor
+            {{#ui-checkbox requirements=(hash required=true) errorMessages=(hash required="Are you lying?")}}
+              This information is correct
             {{/ui-checkbox}}
           {{/form.row}}
         {{/form.section}}
