@@ -50,13 +50,19 @@ ul {
   text-align: left;
 }
 
-.tooltip {
-  border-bottom: dashed 1px $color-blue;
+.help {
   font-size: 12px;
+  text-decoration: underline;
   color: $color-blue !important;
   display: inline-block;
   margin: 0 20px;
   line-height: 20px;
+}
+
+.tooltip {
+  border-bottom: dashed 1px #3c404d;
+  color: #3c404d !important;
+  font-style: normal;
 }
 
 .frame {

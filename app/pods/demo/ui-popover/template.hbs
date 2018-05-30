@@ -1,7 +1,7 @@
 <div style="width: 100%">
   {{#ui-section as |section|}}
     {{#section.h1}}
-      Title
+      Popover
     {{/section.h1}}
 
     {{#section.actions}}
@@ -17,18 +17,43 @@
       {{/ui-select}}
 
       {{#ui-popover
-        showOn="hover"
+        showOn="click"
+        blueprint="help"
         width=260 as |popover|}}
-        <span class="tooltip">
+        <span class="help">
           What is this?
         </span>
         {{#popover.popper as |popper|}}
           {{#popper.title}}
-            This is a tooltip style popover.
+            Title
           {{/popper.title}}
-          {{#popper.description}}
-            Expand on the feature with a super sweet description.
-          {{/popper.description}}
+          {{#popper.body}}
+            <p>
+              This explains the element. Because it was shown on click you can have
+              this modal be scrollable.
+            </p>
+            <p>
+              This explains the element. Because it was shown on click you can have
+              this modal be scrollable.
+            </p>
+            <h3>Section title</h3>
+            <p>
+              This explains the element. Because it was shown on click you can have
+              this modal be scrollable.
+            </p>
+            <p>
+              This explains the element. Because it was shown on click you can have
+              this modal be scrollable.
+            </p>
+            <p>
+              This explains the element. Because it was shown on click you can have
+              this modal be scrollable.
+            </p>
+            <p>
+              This explains the element. Because it was shown on click you can have
+              this modal be scrollable.
+            </p>
+          {{/popper.body}}
         {{/popover.popper}}
       {{/ui-popover}}
     {{/section.filters}}
@@ -73,6 +98,25 @@
     {{section.divider}}
 
     {{#section.body}}
+      This is a
+      {{#ui-popover
+        showOn="hover"
+        width=260 as |popover|}}
+        <em class="tooltip">
+          tooltip
+        </em>
+        {{#popover.popper as |popper|}}
+          {{#popper.title}}
+            This is a tooltip style popover.
+          {{/popper.title}}
+          {{#popper.description}}
+            Expand on the feature with a super sweet description.
+          {{/popper.description}}
+        {{/popover.popper}}
+      {{/ui-popover}}
+
+      <br><br>
+
 
       <pre>\{{#ui-popover showOn="hover" as |popover|}}
 
