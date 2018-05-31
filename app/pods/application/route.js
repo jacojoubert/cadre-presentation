@@ -11,6 +11,7 @@ export default Route.extend({
     'problem.features',
     'problem.maintainable',
     'approach.index',
+    'approach.overview',
     'approach.blueprints',
     'approach.variants',
     'problem.in-practice',

@@ -1,0 +1,39 @@
+<div class="table">
+  {{#if (eq stage 1)}}
+    <div>
+      <h1>Markup</h1>
+      HTML
+    </div>
+
+    <div>
+      <h1>Presentation</h1>
+      CSS
+    </div>
+  {{/if}}
+
+  {{#if (gt stage 1)}}
+    <div>
+      <h1>Functionality</h1>
+      Javascript<br>&nbsp;
+      {{#if (gt stage 2)}}
+        Component
+      {{/if}}&nbsp;
+    </div>
+
+    <div>
+      <h1>Markup</h1>
+      HTML<br>&nbsp;
+      {{#if (gt stage 2)}}
+        Blueprint
+      {{/if}}&nbsp;
+    </div>
+
+    <div>
+      <h1>Presentation</h1>
+      CSS<br>&nbsp;
+      {{#if (gt stage 2)}}
+        Variant
+      {{/if}}&nbsp;
+    </div>
+  {{/if}}
+</div>

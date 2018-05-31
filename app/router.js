@@ -16,6 +16,7 @@ Router.map(function() {
   });
   this.route('approach', function() {
     this.route('index');
+    this.route('overview');
     this.route('blueprints');
     this.route('variants');
     this.route('layouts-pre');
