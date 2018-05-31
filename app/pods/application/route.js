@@ -35,7 +35,7 @@ export default Route.extend({
     const currentIndex = order.indexOf(current);
 
     // Right
-    if (event.which === 39 && event.shiftKey) {
+    if ((event.which === 39 && event.shiftKey) || event.which == 190) {
       let currentController = this.controllerFor(current);
       let next = order[currentIndex + 1];
 
@@ -48,7 +48,7 @@ export default Route.extend({
     }
 
     // Left
-    if (event.which === 37 && event.shiftKey) {
+    if ((event.which === 37 && event.shiftKey) || event.which == 188) {
       let currentController = this.controllerFor(current);
       let previous = order[currentIndex - 1];
 
